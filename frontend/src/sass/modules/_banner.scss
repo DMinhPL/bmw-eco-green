@@ -1,4 +1,6 @@
-.s-banner {
+.eco-s-banner {
+    position: relative;
+    z-index: 1;
     &_background {
         .img-bg {
             &::after {

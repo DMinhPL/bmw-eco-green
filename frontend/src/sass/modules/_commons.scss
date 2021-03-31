@@ -1,0 +1,133 @@
+main.wrapper {
+    overflow: hidden;
+    background: #f3f7f9;
+}
+.eco-m-infoPanel {
+    $root: &;
+    &_wrapper {
+        position: relative;
+    }
+    &_content {
+        position: relative;
+        z-index: 1;
+        border-radius: 10px;
+        background: transparent url(/images/bg-info.png) no-repeat center/100% auto;
+        @include tablet-up {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 855px;
+            background-position-x: -150px;
+            padding: 97px 480px 30px 62px;
+        }
+        @include tablet-down {
+            background: #364052;
+            padding: 20px;
+        }
+        &.reverse {
+            @include tablet-up {
+                background-position-x: 150px;
+                padding: 97px 62px 30px 480px;
+            }
+            #{$root}_avatar {
+                right: unset;
+                left: 0;
+            }
+        }
+        p {
+            color: $white;
+            font-weight: 700;
+            text-align: center;
+            font-family: $font-utm;
+            &:nth-child(2) {
+                text-align: justify;
+                font-size: 14px;
+                @include mobile-up {
+                    margin-bottom: 38px;
+                    font-size: 20px;
+                }
+            }
+            &:nth-child(3) {
+                font-size: 22px;
+                text-transform: uppercase;
+                @include mobile-down {
+                    font-size: 18px;
+                }
+            }
+            &:last-child {
+                font-style: italic;
+                @include mobile-down {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    &_avatar {
+        @include tablet-up {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            max-width: 424px;
+        }
+        @include tablet-down {
+            margin-bottom: 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+.a-text {
+    font-size: 20px;
+    color: #323232;
+    text-align: center;
+    @include mobile-down {
+        font-size: 15px;
+    }
+    &-italic {
+        font-style: italic;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-md {
+        font-size: 16px;
+        @include mobile-down {
+            font-size: 13px;
+        }
+    }
+    &-uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.eco-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    display: block;
+    overflow: hidden;
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s ease;
+    }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+    -webkit-overflow-scrolling: auto;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #3b6098;
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-track {
+    background: rgba(#3b6098, 0.4);
+}

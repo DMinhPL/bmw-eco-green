@@ -5,3 +5,10 @@
 //     font-weight: 400;
 //     font-style: normal;
 // }
+@font-face {
+    font-family: 'UTM Facebook';
+    src: url('#{$font-path}UTMFacebookKT.woff2') format('woff2'), url('#{$font-path}UTMFacebookKT.woff') format('woff'), url('#{$font-path}UTMFacebookKT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,216 @@
+.eco-s-landing {
+    $root: &;
+    position: relative;
+    z-index: 2;
+    @include mobile-up {
+        margin-top: -60px;
+    }
+    &_intro {
+        position: relative;
+        &_cloud {
+            position: absolute;
+            top: -70%;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 500px;
+            pointer-events: none;
+            animation: floating 5s ease-in-out infinite;
+            background: transparent url($img_origin+'cloud.png') no-repeat center/100% auto;
+            @include break-min(1500px) {
+                height: 690px;
+            }
+        }
+        & > .container {
+            position: relative;
+            z-index: 2;
+        }
+        &_heading {
+            margin: 0 auto 40px;
+            overflow: hidden;
+            text-align: center;
+            @include mobile-down {
+                margin: 0 auto 15px;
+            }
+            h1 {
+                font-weight: 700;
+                font-size: 71px;
+                font-family: 'Arial', sans-serif;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                color: #a0a4b5;
+                text-shadow: 4px -3px 3px rgba(#69707a, 1), 1px -1px 0 #69707a, 2px -2px 0 #69707a, 3px -3px 0 #69707a, 4px -4px 0 #69707a, 5px -5px 0 #69707a;
+                // @include mobile-up {
+                //     overflow: hidden;
+                //     animation-delay: 2s;
+                //     animation: typing 1s steps(40, end);
+                //     white-space: nowrap;
+                // }
+                @include mobile-down {
+                    font-size: 41px;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &_desc {
+            text-align: center;
+            p {
+                &:first-child {
+                    max-width: 660px;
+                    margin: 0 auto 50px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    @include mobile-down {
+                        margin-bottom: 12px;
+                    }
+                }
+                &:last-child {
+                    font-size: 17px;
+                }
+            }
+        }
+        &_leave {
+            position: absolute;
+            display: inline-block;
+            img {
+                width: 100%;
+            }
+            &.left {
+                top: 0;
+                left: 0;
+                max-width: 113px;
+            }
+            &.right {
+                bottom: 0;
+                right: 0;
+                max-width: 124px;
+            }
+        }
+    }
+    &_info {
+        padding-bottom: 30px;
+        padding-top: 90px;
+        @include tablet-down {
+            padding-top: 40px;
+        }
+        @include mobile-down {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &:first-child {
+            @include mobile-up {
+                padding-top: 60px;
+            }
+        }
+    }
+    &_text {
+        margin: 30px auto;
+        max-width: 660px;
+        @include mobile-down {
+            margin: 12px auto;
+        }
+    }
+    &_image {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        overflow: hidden;
+        @include mobile-down {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        &-double {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+            @include mobile-down {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            #{$root}_image-item {
+                &:first-child {
+                    flex: 0 0 33.33333%;
+                    max-width: 33.33333%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    @include mobile-down {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                    .eco-image {
+                        padding-bottom: 551/395 * 100%;
+                    }
+                }
+                &:last-child {
+                    flex: 0 0 66.66667%;
+                    max-width: 66.66667%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    @include mobile-down {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                    .eco-image {
+                        padding-bottom: 67.6087%;
+                        @include mobile-down {
+                            padding-bottom: 67.4087%;
+                        }
+                        @include small-mobile {
+                            padding-bottom: 66.9087%;
+                        }
+                    }
+                }
+            }
+        }
+        &-triple {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5px;
+            margin-right: -5px;
+            .right {
+                flex: 0 0 45%;
+                max-width: 45%;
+                padding-left: 5px;
+                padding-right: 5px;
+                #{$root}_image-item {
+                    .eco-image {
+                        padding-bottom: 143.8664%;
+                    }
+                }
+            }
+            .left {
+                flex: 0 0 55%;
+                max-width: 55%;
+                padding-left: 5px;
+                padding-right: 5px;
+                #{$root}_image-item {
+                    &:first-child {
+                        margin-bottom: 10px;
+                    }
+                    .eco-image {
+                        padding-bottom: 339/588 * 100%;
+                        @include mobile-down {
+                            padding-bottom: 56.39306%;
+                        }
+                        @include small-mobile {
+                            padding-bottom: 54.99306%;
+                        }
+                    }
+                }
+            }
+        }
+        &-item {
+            border-radius: 10px;
+            overflow: hidden;
+            .eco-image {
+                border-radius: 10px;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}

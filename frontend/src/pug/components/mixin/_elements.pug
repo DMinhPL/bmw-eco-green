@@ -62,3 +62,20 @@ mixin blockquote-center(text,footer,author,style)
 mixin blockquote-right(text,footer,author,style)
 	- var style = ' ' + style || ''
 	+blockquote(text,footer,author,'text-right' + style)
+
+mixin infoPanel(infoData, isReverse)
+	unless isReverse
+		- var isReverse = ''
+	.eco-m-infoPanel 
+		.eco-m-infoPanel_wrapper 
+			.eco-m-infoPanel_content(class=isReverse?'reverse':'') 
+				.eco-m-infoPanel_avatar
+					.eco-m-infoPanel_avatar_image.wow.fadeInDown(data-wow-delay='0.4s')
+						img(src=imgPath+infoData.srcImg, alt="avatar") 
+				p.wow.fadeInUp(data-wow-delay='0.3s') #[=infoData.content]
+				p.wow.fadeInUp(data-wow-delay='0.6s') #[=infoData.author]
+				p.wow.fadeInUp(data-wow-delay='1.2s') #[=infoData.role]
+
+mixin eco_image(srcImg, alt)
+	.eco-image.wow.fadeIn
+		img(src=imgPath+srcImg, alt=alt, loading='lazy')
