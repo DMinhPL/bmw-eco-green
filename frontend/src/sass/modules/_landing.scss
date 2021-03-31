@@ -27,7 +27,6 @@
         }
         &_heading {
             margin: 0 auto 40px;
-            overflow: hidden;
             text-align: center;
             @include mobile-down {
                 margin: 0 auto 15px;
@@ -39,15 +38,26 @@
                 text-transform: uppercase;
                 margin-bottom: 0;
                 color: #a0a4b5;
+                position: relative;
+                transition: 0.4s ease;
                 text-shadow: 4px -3px 3px rgba(#69707a, 1), 1px -1px 0 #69707a, 2px -2px 0 #69707a, 3px -3px 0 #69707a, 4px -4px 0 #69707a, 5px -5px 0 #69707a;
-                // @include mobile-up {
-                //     overflow: hidden;
-                //     animation-delay: 2s;
-                //     animation: typing 1s steps(40, end);
-                //     white-space: nowrap;
-                // }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -17px;
+                    width: 127px;
+                    left: calc(50% - 62px);
+                    height: 1px;
+                    background-color: #a5b2b9;
+                    @include mobile-down {
+                        bottom: -8px;
+                    }
+                }
+                @include tablet-down {
+                    font-size: 64px;
+                }
                 @include mobile-down {
-                    font-size: 41px;
+                    font-size: 46px;
                 }
             }
             img {
