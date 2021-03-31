@@ -1,0 +1,9 @@
+.s-banner {
+    &_background {
+        .img-bg {
+            &::after {
+                padding-top: 1205/2214 * 100%;
+            }
+        }
+    }
+}
