@@ -1,0 +1,36 @@
+extends layouts/_layout_default
+
+
+block setting
+    - title = "Bmwindows - story"
+    - noFooter = true
+
+block content 
+    .story-wrapper
+        .s-story_img
+            .s-story_img-item.active(data-thumb="thumb1")
+                picture
+                    source(media='(min-width:768px)' srcset='/images/story1.jpg')
+                    img(src='/images/story1-mobile.jpg' alt='story')
+
+            .s-story_img-item(data-thumb="thumb2")
+                picture
+                    source(media='(min-width:768px)' srcset='/images/story2.jpg')
+                    img(src='/images/story2.jpg' alt='story')
+            .s-story_img-item(data-thumb="thumb3")
+                picture
+                    source(media='(min-width:768px)' srcset='/images/thumb3.png')
+                    img(src='/images/thumb3-mobile.png' alt='story')
+
+        section.s-story.s-story-1#thumb1
+            .s-story_wrapper
+                .s-story_text
+                    h2 Một ngày của vợ ngoại binh CLB Viettel
+        section.s-story.s-story-2#thumb2
+            .s-story_wrapper
+                .s-story_text
+                    h2 Một ngày của vợ ngoại binh CLB Viettel
+        section.s-story.s-story-3#thumb3
+            .s-story_wrapper
+                .s-story_text
+                    h2 Một ngày của vợ ngoại binh CLB Viettel

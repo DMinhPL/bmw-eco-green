@@ -17,8 +17,8 @@ html(lang=language)
         main.wrapper
             block content
         // End Main Content
-
-        include ../components/_footer
+        if noFooter = false
+            include ../components/_footer
         
         //- Add Custom Modal
         block modal
