@@ -30,8 +30,35 @@
         }
     }
     &_text {
+        max-width: 906px;
         padding: 20px;
+        margin-right: auto;
+        margin-left: auto;
         text-align: center;
+        p {
+            font-size: 24px;
+            @include mobile-down {
+                font-size: 18px;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            span {
+                display: inline;
+                color: #fff;
+                text-shadow: 3px 2px 5px black, 6px -2px 5px black, 7px -1px 12px black;
+            }
+        }
+        h1 {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.33;
+            @include mobile-down {
+                font-size: 30px;
+            }
+        }
     }
     &_wrapper {
         display: flex;
