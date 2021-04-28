@@ -1,6 +1,23 @@
 // Sample code
 footer {
+    position: relative;
     .eco-image {
         padding-bottom: 1149/1920 * 100%;
+    }
+    .f-text {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 50px 0;
+        text-align: center;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.62), rgba(255, 255, 255, 0));
+        p {
+            max-width: 470px;
+            margin: auto;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
     }
 }
