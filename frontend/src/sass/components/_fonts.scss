@@ -7,8 +7,22 @@
 // }
 @font-face {
     font-family: 'UTM Facebook';
-    src: url('#{$font-path}UTMFacebookKT.woff2') format('woff2'), url('#{$font-path}UTMFacebookKT.woff') format('woff'), url('#{$font-path}UTMFacebookKT.ttf') format('truetype');
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
+    src: url('#{$font-path}UTMFacebookKT.woff2') format('woff2'), url('#{$font-path}UTMFacebookKT.woff') format('woff'), url('#{$font-path}UTMFacebookKT.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'UTM Futura Extra';
+    font-style: normal;
+    font-weight: 900;
+    src: url('#{$font-path}UTMFuturaExtra.woff2') format('woff2'), url('#{$font-path}UTMFuturaExtra.woff') format('woff'), url('#{$font-path}UTMFuturaExtra.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Provicali';
+    font-style: normal;
+    font-weight: normal;
+    src: url('#{$font-path}Provicali.woff2') format('woff2'), url('#{$font-path}Provicali.woff') format('woff'), url('#{$font-path}Provicali.ttf') format('truetype');
     font-display: swap;
 }

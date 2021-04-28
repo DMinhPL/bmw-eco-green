@@ -5,6 +5,9 @@
         .img-bg {
             &::after {
                 padding-top: 915/1920 * 100%;
+                @include mobile-down {
+                    padding-top: 61.65625%;
+                }
             }
         }
     }
@@ -12,13 +15,23 @@
         position: absolute;
         bottom: 100px;
         left: 50%;
+        font-family: $font-provicali;
         text-align: center;
         transform: translateX(-50%);
+        @include mobile-down {
+            bottom: 20px;
+        }
         h1 {
             margin-bottom: 0;
-            font-size: 80px;
+            font-size: 120px;
             color: #fff;
             white-space: nowrap;
+            @include desktop-down {
+                font-size: 80px;
+            }
+            @include mobile-down {
+                font-size: 35px;
+            }
         }
     }
 }

@@ -139,9 +139,16 @@ main.wrapper {
 }
 .metro-stressText {
     position: relative;
-    padding-left: 10px;
+    padding-left: 16px;
     margin-bottom: 45px;
+    font-family: $font-futura;
     text-transform: uppercase;
+    @include desktop-up {
+        max-width: 605px;
+    }
+    @include mobile-down {
+        margin-bottom: 25px;
+    }
     &::before {
         position: absolute;
         left: 0;
@@ -155,6 +162,12 @@ main.wrapper {
         font-size: 40px;
         font-weight: 700;
         color: #323232;
+        @include desktop-down {
+            font-size: 30px;
+        }
+        @include mobile-down {
+            font-size: 25px;
+        }
         span {
             color: #fda720;
         }
@@ -180,6 +193,11 @@ main.wrapper {
         font-weight: 700;
         color: #fff;
         text-align: center;
+        @include mobile-down {
+            bottom: 14px;
+            max-width: 272px;
+            font-size: 11px;
+        }
     }
 }
 .mb-20 {
