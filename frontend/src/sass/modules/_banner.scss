@@ -1,11 +1,24 @@
-.eco-s-banner {
+.metro-s-banner {
     position: relative;
     z-index: 1;
     &_background {
         .img-bg {
             &::after {
-                padding-top: 1205/2214 * 100%;
+                padding-top: 915/1920 * 100%;
             }
+        }
+    }
+    &_heading {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+        h1 {
+            margin-bottom: 0;
+            font-size: 80px;
+            color: #fff;
+            white-space: nowrap;
         }
     }
 }

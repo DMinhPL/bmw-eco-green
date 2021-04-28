@@ -10,23 +10,23 @@ main.wrapper {
     &_content {
         position: relative;
         z-index: 1;
-        border-radius: 10px;
         background: transparent url(/images/bg-info.png) no-repeat center/100% auto;
+        border-radius: 10px;
         @include tablet-up {
-            margin-left: auto;
-            margin-right: auto;
             max-width: 855px;
-            background-position-x: -150px;
             padding: 97px 480px 30px 62px;
+            margin-right: auto;
+            margin-left: auto;
+            background-position-x: -150px;
         }
         @include tablet-down {
-            background: #364052;
             padding: 20px;
+            background: #364052;
         }
         &.reverse {
             @include tablet-up {
-                background-position-x: 150px;
                 padding: 97px 62px 30px 480px;
+                background-position-x: 150px;
             }
             #{$root}_avatar {
                 right: unset;
@@ -34,12 +34,12 @@ main.wrapper {
             }
         }
         p {
+            font-family: $font-utm;
             color: $white;
             text-align: center;
-            font-family: $font-utm;
             &:nth-child(2) {
-                text-align: justify;
                 font-size: 14px;
+                text-align: justify;
                 @include mobile-up {
                     margin-bottom: 38px;
                     font-size: 20px;
@@ -99,24 +99,22 @@ main.wrapper {
         text-transform: uppercase;
     }
 }
-
 .eco-image {
     position: relative;
+    display: block;
     width: 100%;
     padding-bottom: 100%;
-    display: block;
     overflow: hidden;
     img {
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
         transition: 0.4s ease;
+        object-fit: cover;
     }
 }
-
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
@@ -129,4 +127,116 @@ main.wrapper {
 }
 ::-webkit-scrollbar-track {
     background: rgba(#3b6098, 0.4);
+}
+.metro_wrapText {
+    max-width: 660px;
+    padding: 15px 0 15px;
+    margin: auto;
+    overflow: hidden;
+    p {
+        font-size: 20px;
+    }
+}
+.metro-stressText {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+    &::before {
+        position: absolute;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        content: '';
+        background-color: #403d3c;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 40px;
+        font-weight: 700;
+        color: #323232;
+        span {
+            color: #fda720;
+        }
+    }
+}
+.metro-image {
+    position: relative;
+    &_inner {
+        .img-bg {
+            &::after {
+                padding-top: 714/1095 * 100%;
+            }
+        }
+    }
+    &_desc {
+        position: absolute;
+        right: 0;
+        bottom: 52px;
+        left: 0;
+        max-width: 754px;
+        margin: auto;
+        font-size: 26px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.metro-imageLayout {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+    &_item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 8px;
+        padding-left: 8px;
+        @include mobile-down {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .img {
+            margin-bottom: 16px;
+            .img-bg {
+                &::after {
+                    padding-top: 71.5%;
+                }
+            }
+            &.vertical {
+                .img-bg {
+                    &::after {
+                        padding-top: 818/560 * 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.metro-doubleImage {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: -8px;
+    margin-left: -8px;
+    &_item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 8px;
+        padding-left: 8px;
+        @include mobile-down {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        margin-bottom: 16px;
+        .img-bg {
+            &::after {
+                padding-top: 60.20548%;
+            }
+        }
+    }
 }

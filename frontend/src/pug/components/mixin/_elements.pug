@@ -79,3 +79,39 @@ mixin infoPanel(infoData, isReverse)
 mixin eco_image(srcImg, alt)
 	.eco-image.wow.fadeIn
 		img(src=imgPath+srcImg, alt=alt, loading='lazy')
+
+mixin metro_stressText
+	.metro-stressText
+		p
+			block
+
+mixin metro_image(srcImg, desc, className)
+	unless desc 
+		- var desc = ""
+	unless className 
+		- var className = ""
+	.metro-image(class=className)
+		.metro-image_inner
+			+img-bg(srcImg,"thumbnail")
+		if desc
+			.metro-image_desc #[=desc]
+mixin metro_image_layout(srcImg1, srcImg2, srcImg3, reverse)
+	.metro-imageLayout
+		if !reverse
+			.metro-imageLayout_item 
+				.img.wow.fadeInLeft(data-wow-delay="0.4s")
+					+metro_image(srcImg1)
+				.img.wow.fadeInLeft(data-wow-delay="0.4s")
+					+metro_image(srcImg2)
+			.metro-imageLayout_item
+				.img.vertical.wow.fadeInRight(data-wow-delay="0.4s")
+					+metro_image(srcImg3)
+		else
+			.metro-imageLayout_item
+				.img.vertical.wow.fadeInLeft(data-wow-delay="0.4s")
+					+metro_image(srcImg3)
+			.metro-imageLayout_item 
+				.img.wow.fadeInRight(data-wow-delay="0.4s")
+					+metro_image(srcImg1)
+				.img.wow.fadeInRight(data-wow-delay="0.4s")
+					+metro_image(srcImg2)
