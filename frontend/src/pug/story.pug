@@ -8,16 +8,23 @@ block setting
 block content 
     .story-wrapper
         .s-story_img
-            .s-story_img-item.active(data-thumb="thumb1")
+            .s-story_img-item.hasVideo.active(data-thumb="thumb1")
+                .onShowDesktop
+                    iframe(src='https://www.youtube.com/embed/3U8oXHffMFQ?controls=0' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' frameborder='0')
+                .onShowMobile
+                    picture
+                        source(media='(min-width:768px)' srcset='/images/story1.jpg')
+                        img(src='/images/story1-mobile.jpg' alt='story')
+            .s-story_img-item.active(data-thumb="thumb2")
                 picture
                     source(media='(min-width:768px)' srcset='/images/story1.jpg')
                     img(src='/images/story1-mobile.jpg' alt='story')
 
-            .s-story_img-item(data-thumb="thumb2")
+            .s-story_img-item(data-thumb="thumb3")
                 picture
                     source(media='(min-width:768px)' srcset='/images/story2.jpg')
                     img(src='/images/story2-mobile.jpg' alt='story')
-            .s-story_img-item(data-thumb="thumb3")
+            .s-story_img-item(data-thumb="thumb4")
                 picture
                     source(media='(min-width:768px)' srcset='/images/thumb3.png')
                     img(src='/images/thumb3-mobile.png' alt='story')
@@ -27,11 +34,23 @@ block content
                 .s-story_text
                     p: a(href="/") thể thao
                     h1 Một ngày của vợ ngoại binh CLB Viettel  
-        section.s-story.s-story-2#thumb2
+        section.s-story.s-story-1#thumb2
+            .s-story_wrapper
+                .s-story_text
+                    p: a(href="/") thể thao
+                    h1 Một ngày của vợ ngoại binh CLB Viettel  
+        section.s-story.s-story-2#thumb3
             .s-story_wrapper
                 .s-story_text
                     p: span Tôi là Prueksa Khonthiang, 26 tuổi, vợ cầu thủ Pedro Paulo. Bạn bè và người thân thường gọi tôi là Toey. Một ngày mới với tôi thường bắt đầu lúc 6h. Tôi thích dậy sớm để cảm nhận rõ nhất vẻ đẹp của buổi sáng.
-        section.s-story.s-story-3#thumb3
+        section.s-story.s-story-3#thumb4
             .s-story_wrapper
                 .s-story_text
                     h2 Một ngày của vợ ngoại binh CLB Viettel
+
+block js 
+    script#www-widgetapi-script(type='text/javascript' src='https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js' async='')
+    script(src='https://www.youtube.com/player_api')
+
+
+
