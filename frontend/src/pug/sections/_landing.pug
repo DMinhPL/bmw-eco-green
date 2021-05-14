@@ -1,98 +1,29 @@
 -
-	var hungInfo = {
-			content:'Nếu bạn hỏi anh em Eco Green tự hào nhất về điều gì sau khi hoàn thành dự án, tôi có thể chắc chắn rằng đó là niềm tự hào về đội ngũ, về sự gắn kết, đồng lòng của anh em quyết tâm đưa dự án về đích thành công. Tôi cảm nhận mỗi anh em ở đây đều đã trưởng thành lên rất nhiều. Sau một năm nhìn lại, anh em chúng tôi khác xưa nhiều lắm.',
-			author:'Trần hùng',
-			role:'Kỹ sư công trình',
-			srcImg:'avaHung.png'
-		}
-	var phucInfo = {
-			content:'Tiến độ dự án bị kéo dài do việc nhập khẩu vật tư bị ảnh hưởng của dịch Covid 19 nhưng không vì thế mà tinh thần anh em tụt dốc. Ngay từ khi nhận dự án, anh em chúng tôi đã đặt mục tiêu phải đưa dự án về đích thành công. Đó là mục tiêu lớn nhất. Và chúng tôi đã quyết tâm đến cùng để thực hiện điều đó.',
-			author:'nguyễn đình phúc',
-			role:'Kỹ sư công trình',
-			srcImg:'avaPhuc.png'
-		}
-	var phucInfo = {
-			content:'Tiến độ dự án bị kéo dài do việc nhập khẩu vật tư bị ảnh hưởng của dịch Covid 19 nhưng không vì thế mà tinh thần anh em tụt dốc. Ngay từ khi nhận dự án, anh em chúng tôi đã đặt mục tiêu phải đưa dự án về đích thành công. Đó là mục tiêu lớn nhất. Và chúng tôi đã quyết tâm đến cùng để thực hiện điều đó.',
-			author:'nguyễn đình phúc',
-			role:'Kỹ sư công trình',
-			srcImg:'avaPhuc.png'
-		}
-	var tienInfo = {
-			content:'Ở đây, anh em được sống những ngày tháng với tinh thần trách nhiệm cao vì công việc, nhưng trên hết là tinh thần vì đồng đội. Mình phải làm tốt, không chỉ là cho bản thân, mà còn cho những người anh em đã luôn tin tưởng mình, luôn cố gắng vì dự án, vì mục tiêu chung của cả team.',
-			author:'lê đình tiến',
-			role:'Kỹ sư công trình',
-			srcImg:'avaTien.png'
-		}
-	var thanhInfo = {
-			content:'Khi nhận nhiệm vụ triển khai dự án này, Tổng Giám đốc đã vạch ra cho tôi những mục tiêu rõ ràng của dự án, trong đó tôi luôn nằm lòng 3 mục tiêu: Phải thay đổi cách làm việc của bản thân, quyết liệt, chỉn chu và sát việc hơn nữa; đào tạo được anh em; hoàn thành dự án với chất lượng tốt nhất.',
-			author:'nguyễn ngọc thành',
-			role:'Chỉ huy trưởng',
-			srcImg:'avaThanh.png'
-		}
-	
-section.eco-s-landing 
-	.eco-s-landing_intro
-		.eco-s-landing_intro_cloud.wow.fadeInUp
-		.container
-			.eco-s-landing_intro_leave.left
-				img(src=imgPath+"leave1.svg", alt="leave")
-			.eco-s-landing_intro_leave.right
-				img(src=imgPath+"leave2.svg", alt="leave")
-			.eco-s-landing_intro_heading 	
-				.wow.fadeInUp
-						h1(title='eco green sai gon') eco green sai gon
-			.eco-s-landing_intro_desc.wow.fadeInUp
-				p Eco Green - một dự án không quá lớn với BM Windows
-					|  ở thời điểm hiện tại nhưng lại mang đến sự thay
-					|  đổi lớn cho Ban chỉ huy: Những người trẻ nhiệt thành 
-					| và máu lửa trong công việc.
-				p
-					| Bài 
-					strong Thúy Vy
-	.container
-		.eco-s-landing_info 
-			+infoPanel(hungInfo)
-		.eco-s-landing_text.wow.fadeInLeft(data-wow-delay='0.5s') 
-			p.a-text Đó là chia sẻ của Trần Hùng – 
-				| Kỹ sư công trình tại Eco Green. 
-				| Và tôi tin rằng, đây không chỉ là cảm nhận của riêng Hùng 
-				| và anh em BCH mà còn của là sự ghi nhận của Ban lãnh đạo, 
-				| của công ty về đội ngũ trẻ này.
-		.eco-s-landing_image 
-			.eco-s-landing_image-double
-				.eco-s-landing_image-item.wow.fadeInLeft(data-wow-delay='0.4s')
-					+eco_image('thumb1.png','thumbnail')
-				.eco-s-landing_image-item.wow.fadeInRight(data-wow-delay='0.4s')
-					+eco_image('thumb2.png','thumbnail')
-		.eco-s-landing_info  
-			+infoPanel(phucInfo, true)
-		.eco-s-landing_image 
-			.eco-s-landing_image-triple
-				.left
-					.eco-s-landing_image-item.wow.fadeInDown(data-wow-delay='0.4s')
-						+eco_image('thumb3.png','thumbnail')
-					.eco-s-landing_image-item.wow.fadeInUp(data-wow-delay='0.4s')
-						+eco_image('thumb4.png','thumbnail')
-				.right
-					.eco-s-landing_image-item.wow.fadeInRight(data-wow-delay='0.4s')
-						+eco_image('thumb5.png','thumbnail')
-		.eco-s-landing_info 
-			+infoPanel(tienInfo)
-		.eco-s-landing_text.wow.fadeInLeft(data-wow-delay='0.5s') 
-			p.a-text Riêng với Anh Nguyễn Ngọc Thành – Chỉ huy trưởng dự án thì Eco Green là một dự án rất quan trọng với Anh. Hơn ai hết, Anh hiểu được sự kỳ vọng của Ban lãnh đạo dành cho mình qua dự án này.
-		.eco-s-landing_info 
-			+infoPanel(thanhInfo, true)
-		.eco-s-landing_text.wow.fadeInLeft(data-wow-delay='0.5s') 
-			p.a-text Đây là một dự án có tiến độ không gấp nhưng cần sự chỉn chu, kỹ lưỡng trong quá trình triển khai với CĐT Xuân Mai Corp. Dự án có kỹ thuật phức tạp, yêu cầu chất lượng cao, cũng là dự án BM Windows triển khai và cung cấp sản phẩm cửa nhôm cầu cách nhiệt. 
-			p.a-text Ban chỉ huy đã kết hợp cùng các phòng ban/bộ phận như Bộ phận Kỹ thuật Triển khai và Bộ phận Sản xuất tại nhà máy Bình Dương để đưa ra các biện pháp gia công tối ưu nhất và đạt chất lượng tốt nhất cho sản phẩm.
-		.eco-s-landing_image
-			.wow.fadeIn
-				img(src="/images/team.png", alt="team")
-		.eco-s-landing_text.wow.fadeInLeft(data-wow-delay='0.5s')
-			p.a-text.a-text-italic “Riêng bản thân tôi cảm thấy tự hào nhất tại dự án là sự đồng lòng của tất cả anh em BCH từ đầu đến cuối dự án, trong công tác phối hợp thi công cùng các bộ phận phòng ban một cách nhịp nhàng, có một kế hoạch chi tiết cụ thể cho từng giai đoạn, đáp ứng được tiến độ... Ngoài ra còn xây dựng được mối quan hệ tốt với Chủ đầu tư, Tư vấn giám sát và Tổng thầu mới. Khi nhắc BM Windows họ luôn nhắc tới sự chuyên nghiệp, chỉn chu, phối hợp tốt trong công việc và là những con người rất đàng hoàng, tử tế.”
-			p.m-0.a-text.a-text-bold.a-text-uppercase Nguyễn Ngọc Thành
-			p.m-0.a-text.a-text-md Chỉ huy trưởng
-
+	var contentImage1 = '“Mỗi khi gia đình có việc riêng như hiếu hỉ, đau ốm, không chỉ cá nhân anh em văn phòng mà cả người thân của anh em, nhà máy đều quan tâm, hỗ trợ kịp thời. Ngoài sự thăm hỏi động viên của công ty thì anh em còn tham gia phụ việc gia đình của nhau như người nhà.” – Anh Chu Đình Cường –Trưởng Bộ phận Sản xuất Nhà máy.'
+	var contentImage2 = '“Tôi thích nhất những lần anh em sắp xếp công việc để ăn uống cùng nhau, cà kê đôi ba câu chuyện vui. Những ngày quan trọng của các thành viên, mọi người đều cố gắng sắp xếp để có mặt đông đủ. Ngoài những lúc bận rộn vì công việc, anh em hay tâm sự với nhau những chuyện cá nhân, mỗi ngày đi làm vì thế cũng vui hơn.” – Anh Bùi Văn Kỳ - Kỹ sư Sản xuất'
+section.oneHome-s-landing 
+	.container.bigger
+		.oneHome-s-landing_contentImage 
+			+contentImageOneHome('thumb1.png',contentImage1)
+			+contentImageOneHome('thumb2.png',contentImage2, true)
+	.container.large 
+		.oneHome-s-landing_doubleImage 
+			.oneHome-s-landing_doubleImage_item 
+				img(src=imgPath+"thumb3.png", alt="thumb")
+			.oneHome-s-landing_doubleImage_item 
+				img(src=imgPath+"thumb4.png", alt="thumb")
+	.container 
+		.oneHome-s-landing_text
+			p “Tôi được luân chuyển từ nhà máy Bình Dương ra Hà Nội gần hai tháng nay. Tuy thay đổi môi trường sống và làm việc nhưng tôi lại thấy rất quen thuộc vì sự gắn bó giữa anh em ở đây. Chúng tôi đều là những đồng nghiệp, những người bạn, người anh em trong đại gia đình BM Windows.” – Anh Nguyễn Tấn Trãi – Nhân viên Kiểm tra chất lượng.
+			br
+			p “Vào những thời điểm nhà máy nhận dự án nóng, tiến độ gấp, đã có những lúc chúng tôi tranh luận gay gắt, nhưng sau cùng thì anh em đều vui vẻ trở lại vì mọi người đều hiểu đó là công việc.” – Anh Nguyễn Văn Nguyễn – Kỹ sư Sản xuất.
+	.container 
+		.oneHome-s-landing_text 
+			p “Điều cốt lõi làm nên sự nhiệt huyết, ‘cháy’ hết mình với công việc ở nhà máy Hà Nội chính là sự đoàn kết giữa từng cá nhân với nhau để tạo nên một tập thể mạnh. Khi gặp những dự án nhiều thử thách, anh em đều mong muốn được đóng góp sức mình vào sản phẩm cuối cùng, hỗ trợ nhau trong từng nghiệp vụ nhỏ để sau cùng, thành quả là sự ghi nhận cho cả tập thể”. Anh Bùi Văn Kỳ - Kỹ sư Sản xuất.
+			.img
+				img(src=imgPath+"text-layer.png", alt="text")
+			p “Tôi nghĩ điều khiến tôi và những người bạn của mình gắn bó với công ty chính là văn hóa làm việc tại BM Windows luôn khuyến khích sự sáng tạo của từng cá nhân, đồng thời đề cao sự tương trợ, đoàn kết trong tập thể, xem con người chính là ‘tài sản’ lớn nhất giúp BM Windows vững bước phát triển từng ngày.” 
+				| #[span.d-block Anh Chu Đình Cường –Trưởng Bộ phận Sản xuất Nhà máy.] 
 
 
 

@@ -1,6 +1,24 @@
 // Sample code
+$xxl: 1366px;
+$w: 1px / $xxl * 100vw;
+$h: 1px/800px * 100vh;
 .masthead {
     padding: 200px 0;
     text-align: center;
     background-color: #fff;
+}
+.container {
+    @include break-min($xxl) {
+        max-width: 712 * $w;
+    }
+    &.bigger {
+        @include break-min($xxl) {
+            max-width: 960 * $w;
+        }
+    }
+    &.large {
+        @include break-min($xxl) {
+            max-width: 1163 * $w;
+        }
+    }
 }

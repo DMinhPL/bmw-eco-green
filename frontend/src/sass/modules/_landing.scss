@@ -1,226 +1,145 @@
-.eco-s-landing {
+.oneHome-s-landing {
     $root: &;
-    position: relative;
-    z-index: 2;
-    @include mobile-up {
-        margin-top: -60px;
-    }
-    &_intro {
-        position: relative;
-        &_cloud {
-            position: absolute;
-            top: -70%;
-            left: 0;
-            right: 0;
-            z-index: 1;
-            height: 500px;
-            pointer-events: none;
-            animation: floating 5s ease-in-out infinite;
-            background: transparent url($img_origin+'cloud.png') no-repeat center/100% auto;
-            @include break-min(1500px) {
-                height: 690px;
+    &_contentImage {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0 45px;
+        margin: 0 -16px;
+        @include break-min(1800px) {
+            padding: 70px 0 75px;
+            margin: 0 -20px;
+        }
+        @include tablet-down {
+            padding: 40px 0 20px;
+        }
+        &_item {
+            display: flex;
+            flex: 0 0 50%;
+            flex-direction: column;
+            max-width: 50%;
+            padding-right: 16px;
+            padding-left: 16px;
+            @include break-min(1800px) {
+                padding-right: 20px;
+                padding-left: 20px;
             }
-        }
-        & > .container {
-            position: relative;
-            z-index: 2;
-        }
-        &_heading {
-            margin: 0 auto 40px;
-            text-align: center;
             @include mobile-down {
-                margin: 0 auto 15px;
+                flex: 0 0 100%;
+                max-width: 100%;
             }
-            h1 {
-                font-weight: 700;
-                font-size: 71px;
-                font-family: 'Arial', sans-serif;
-                text-transform: uppercase;
-                margin-bottom: 0;
-                color: #a0a4b5;
-                position: relative;
-                transition: 0.4s ease;
-                text-shadow: 4px -3px 3px rgba(#69707a, 1), 1px -1px 0 #69707a, 2px -2px 0 #69707a, 3px -3px 0 #69707a, 4px -4px 0 #69707a, 5px -5px 0 #69707a;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    bottom: -17px;
-                    width: 127px;
-                    left: calc(50% - 62px);
-                    height: 1px;
-                    background-color: #a5b2b9;
-                    @include mobile-down {
-                        bottom: -8px;
-                    }
-                }
-                @include tablet-down {
-                    font-size: 64px;
+            #{$root}_contentImage_img {
+                margin-bottom: 30px;
+                @include break-min(1800px) {
+                    margin-bottom: 70px;
                 }
                 @include mobile-down {
-                    font-size: 46px;
+                    margin-bottom: 12px;
                 }
             }
-            img {
-                width: 100%;
-            }
-        }
-        &_desc {
-            text-align: center;
-            p {
-                &:first-child {
-                    max-width: 660px;
-                    margin: 0 auto 50px;
-                    font-size: 20px;
-                    font-weight: 700;
+            &.reverse {
+                @include mobile-down {
+                    margin-top: 16px;
+                }
+                #{$root}_contentImage_img {
+                    margin-top: 30px;
+                    margin-bottom: 0;
+                    @include desktop-down {
+                        margin-top: 0;
+                        margin-bottom: 30px;
+                    }
+                    @include break-min(1800px) {
+                        margin-top: 70px;
+                    }
                     @include mobile-down {
                         margin-bottom: 12px;
                     }
                 }
-                &:last-child {
-                    font-size: 17px;
+                @include desktop-up {
+                    flex-direction: column-reverse;
                 }
             }
         }
-        &_leave {
-            position: absolute;
-            display: inline-block;
+        &_text {
+            font-size: 20px;
+            @include break-min(1800px) {
+                font-size: 33px;
+            }
+            @include mobile-down {
+                font-size: 16px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+        &_img {
             img {
                 width: 100%;
             }
-            &.left {
-                top: 0;
-                left: 0;
-                max-width: 113px;
-            }
-            &.right {
-                bottom: 0;
-                right: 0;
-                max-width: 124px;
-            }
         }
     }
-    &_info {
-        padding-bottom: 30px;
-        padding-top: 90px;
+    &_doubleImage {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 45px 0 35px;
+        margin: 0 -10px;
+        @include break-min(1800px) {
+            padding: 75px 0 55px;
+            margin: 0 -20px;
+        }
         @include tablet-down {
-            padding-top: 40px;
+            padding: 20px 0;
         }
         @include mobile-down {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            margin: 0 -7px;
         }
-        &:first-child {
-            @include mobile-up {
-                padding-top: 60px;
+        &_item {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-right: 10px;
+            padding-left: 10px;
+            @include mobile-down {
+                padding-right: 7px;
+                padding-left: 7px;
+            }
+            img {
+                width: 100%;
             }
         }
     }
     &_text {
-        margin: 30px auto;
-        max-width: 660px;
-        @include mobile-down {
-            margin: 12px auto;
+        padding: 30px 0 35px;
+        @include break-min(1800px) {
+            padding: 55px 0 65px;
         }
-    }
-    &_image {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        overflow: hidden;
-        @include mobile-down {
-            padding-top: 12px;
-            padding-bottom: 12px;
+        @include tablet-down {
+            max-width: 550px;
+            padding: 20px 0;
+            margin: auto;
         }
-        &-double {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -10px;
-            margin-right: -10px;
+        p {
+            font-size: 20px;
+            @include break-min(1800px) {
+                font-size: 33px;
+            }
             @include mobile-down {
-                margin-left: -5px;
-                margin-right: -5px;
-            }
-            #{$root}_image-item {
-                &:first-child {
-                    flex: 0 0 33.33333%;
-                    max-width: 33.33333%;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    @include mobile-down {
-                        padding-left: 5px;
-                        padding-right: 5px;
-                    }
-                    .eco-image {
-                        padding-bottom: 551/395 * 100%;
-                    }
-                }
-                &:last-child {
-                    flex: 0 0 66.66667%;
-                    max-width: 66.66667%;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    @include mobile-down {
-                        padding-left: 5px;
-                        padding-right: 5px;
-                    }
-                    .eco-image {
-                        padding-bottom: 67.6087%;
-                        @include mobile-down {
-                            padding-bottom: 67.4087%;
-                        }
-                        @include small-mobile {
-                            padding-bottom: 66.9087%;
-                        }
-                    }
-                }
+                font-size: 16px;
             }
         }
-        &-triple {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -5px;
-            margin-right: -5px;
-            .right {
-                flex: 0 0 45%;
-                max-width: 45%;
-                padding-left: 5px;
-                padding-right: 5px;
-                #{$root}_image-item {
-                    .eco-image {
-                        padding-bottom: 143.8664%;
-                    }
-                }
+        .img {
+            margin-bottom: 30px;
+            @include break-min(1800px) {
+                margin-bottom: 80px;
             }
-            .left {
-                flex: 0 0 55%;
-                max-width: 55%;
-                padding-left: 5px;
-                padding-right: 5px;
-                #{$root}_image-item {
-                    &:first-child {
-                        margin-bottom: 10px;
-                    }
-                    .eco-image {
-                        padding-bottom: 339/588 * 100%;
-                        @include mobile-down {
-                            padding-bottom: 56.39306%;
-                        }
-                        @include small-mobile {
-                            padding-bottom: 54.99306%;
-                        }
-                    }
-                }
+            @include desktop-down {
+                max-width: 640px;
+                margin: 0 auto 30px;
+            }
+            @include mobile-down {
+                max-width: 250px;
+            }
+            img {
+                width: 100%;
             }
         }
-        &-item {
-            border-radius: 10px;
-            overflow: hidden;
-            .eco-image {
-                border-radius: 10px;
-            }
-        }
-    }
-    img {
-        width: 100%;
-        border-radius: 10px;
     }
 }

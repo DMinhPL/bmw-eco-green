@@ -79,3 +79,12 @@ mixin infoPanel(infoData, isReverse)
 mixin eco_image(srcImg, alt)
 	.eco-image.wow.fadeIn
 		img(src=imgPath+srcImg, alt=alt, loading='lazy')
+
+mixin contentImageOneHome(srcImg, content, reverse)
+	unless reverse
+		- var reverse = ''
+	.oneHome-s-landing_contentImage_item(class=reverse?'reverse':'')
+			.oneHome-s-landing_contentImage_img 
+				img(src=imgPath+srcImg, alt="thumb")
+			.oneHome-s-landing_contentImage_text
+				p #[=content]
