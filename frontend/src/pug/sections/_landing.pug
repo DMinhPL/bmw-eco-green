@@ -8,21 +8,25 @@ section.oneHome-s-landing
 			+contentImageOneHome('thumb2.png',contentImage2, true)
 	.container.large 
 		.oneHome-s-landing_doubleImage 
-			.oneHome-s-landing_doubleImage_item 
+			.oneHome-s-landing_doubleImage_item.wow.fadeInDown 
 				img(src=imgPath+"thumb3.png", alt="thumb")
-			.oneHome-s-landing_doubleImage_item 
+			.oneHome-s-landing_doubleImage_item.wow.fadeInUp 
 				img(src=imgPath+"thumb4.png", alt="thumb")
 	.container 
 		.oneHome-s-landing_text
-			p “Tôi được luân chuyển từ nhà máy Bình Dương ra Hà Nội gần hai tháng nay. Tuy thay đổi môi trường sống và làm việc nhưng tôi lại thấy rất quen thuộc vì sự gắn bó giữa anh em ở đây. Chúng tôi đều là những đồng nghiệp, những người bạn, người anh em trong đại gia đình BM Windows.” – Anh Nguyễn Tấn Trãi – Nhân viên Kiểm tra chất lượng.
+			p.wow.fadeIn “Tôi được luân chuyển từ nhà máy Bình Dương ra Hà Nội gần hai tháng nay. Tuy thay đổi môi trường sống và làm việc nhưng tôi lại thấy rất quen thuộc vì sự gắn bó giữa anh em ở đây. Chúng tôi đều là những đồng nghiệp, những người bạn, người anh em trong đại gia đình BM Windows.” – Anh Nguyễn Tấn Trãi – Nhân viên Kiểm tra chất lượng.
 			br
-			p “Vào những thời điểm nhà máy nhận dự án nóng, tiến độ gấp, đã có những lúc chúng tôi tranh luận gay gắt, nhưng sau cùng thì anh em đều vui vẻ trở lại vì mọi người đều hiểu đó là công việc.” – Anh Nguyễn Văn Nguyễn – Kỹ sư Sản xuất.
+			p.wow.fadeIn “Vào những thời điểm nhà máy nhận dự án nóng, tiến độ gấp, đã có những lúc chúng tôi tranh luận gay gắt, nhưng sau cùng thì anh em đều vui vẻ trở lại vì mọi người đều hiểu đó là công việc.” – Anh Nguyễn Văn Nguyễn – Kỹ sư Sản xuất.
+	.oneHome-s-landing_gallery 
+		each val in [1,2,3,4,5,6,7,8]
+			.oneHome-s-landing_gallery_item.wow.fadeIn(class=`item${val}` data-wow-delay=`0.${val}s`) 
+				img(src=imgPath+`gallery${val}.png`, alt="gallery")
 	.container 
 		.oneHome-s-landing_text 
-			p “Điều cốt lõi làm nên sự nhiệt huyết, ‘cháy’ hết mình với công việc ở nhà máy Hà Nội chính là sự đoàn kết giữa từng cá nhân với nhau để tạo nên một tập thể mạnh. Khi gặp những dự án nhiều thử thách, anh em đều mong muốn được đóng góp sức mình vào sản phẩm cuối cùng, hỗ trợ nhau trong từng nghiệp vụ nhỏ để sau cùng, thành quả là sự ghi nhận cho cả tập thể”. Anh Bùi Văn Kỳ - Kỹ sư Sản xuất.
-			.img
+			p.wow.fadeIn “Điều cốt lõi làm nên sự nhiệt huyết, ‘cháy’ hết mình với công việc ở nhà máy Hà Nội chính là sự đoàn kết giữa từng cá nhân với nhau để tạo nên một tập thể mạnh. Khi gặp những dự án nhiều thử thách, anh em đều mong muốn được đóng góp sức mình vào sản phẩm cuối cùng, hỗ trợ nhau trong từng nghiệp vụ nhỏ để sau cùng, thành quả là sự ghi nhận cho cả tập thể”. Anh Bùi Văn Kỳ - Kỹ sư Sản xuất.
+			.img.wow.zoomIn(data-wow-delay='0.4s')
 				img(src=imgPath+"text-layer.png", alt="text")
-			p “Tôi nghĩ điều khiến tôi và những người bạn của mình gắn bó với công ty chính là văn hóa làm việc tại BM Windows luôn khuyến khích sự sáng tạo của từng cá nhân, đồng thời đề cao sự tương trợ, đoàn kết trong tập thể, xem con người chính là ‘tài sản’ lớn nhất giúp BM Windows vững bước phát triển từng ngày.” 
+			p.wow.fadeIn “Tôi nghĩ điều khiến tôi và những người bạn của mình gắn bó với công ty chính là văn hóa làm việc tại BM Windows luôn khuyến khích sự sáng tạo của từng cá nhân, đồng thời đề cao sự tương trợ, đoàn kết trong tập thể, xem con người chính là ‘tài sản’ lớn nhất giúp BM Windows vững bước phát triển từng ngày.” 
 				| #[span.d-block Anh Chu Đình Cường –Trưởng Bộ phận Sản xuất Nhà máy.] 
 
 

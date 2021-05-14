@@ -84,7 +84,7 @@ mixin contentImageOneHome(srcImg, content, reverse)
 	unless reverse
 		- var reverse = ''
 	.oneHome-s-landing_contentImage_item(class=reverse?'reverse':'')
-			.oneHome-s-landing_contentImage_img 
+			.oneHome-s-landing_contentImage_img.wow.fadeInLeft
 				img(src=imgPath+srcImg, alt="thumb")
-			.oneHome-s-landing_contentImage_text
+			.oneHome-s-landing_contentImage_text.wow.fadeInRight
 				p #[=content]
